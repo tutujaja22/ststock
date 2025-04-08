@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)https://page.genspark.site/slides_tool_call/toolu_01RJpnh2aQq5Rs5PXG78C6DN/daeyoung_packaging_analysis_4.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대영포장 종합 분석 리포트 - 시장 점유율 및 경쟁 분석</title>
+    <link href="./tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./all.min.css">
+    <script src="./chart.min.js.다운로드"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f0f4f8;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .blue-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .fade-in-delay-1 {
+            animation: fadeIn 0.5s ease-out 0.1s forwards;
+            opacity: 0;
+        }
+        .fade-in-delay-2 {
+            animation: fadeIn 0.5s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+        .fade-in-delay-3 {
+            animation: fadeIn 0.5s ease-out 0.3s forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col">
+        <!-- Header with title bar -->
+        <div class="blue-gradient h-3 w-full"></div>
+        
+        <!-- Slide header -->
+        <div class="bg-white py-6 px-12 border-b border-gray-200">
+            <h1 class="text-3xl font-bold text-blue-900">시장 점유율 및 경쟁 분석</h1>
+        </div>
+        
+        <!-- Main content -->
+        <div class="flex flex-col p-12">
+            <div class="flex mb-8">
+                <!-- Left column - Market Share Chart -->
+                <div class="w-1/2 pr-6 fade-in">
+                    <h2 class="text-xl font-semibold text-blue-800 mb-4">대영포장 시장 점유율 추이</h2>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <canvas id="marketShareChart" height="208" style="display: block; box-sizing: border-box; height: 249.6px; width: 535.2px;" width="446"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2 italic">출처: 금융감독원, 공시 자료</p>
+                </div>
+                
+                <!-- Right column - Competitive Landscape -->
+                <div class="w-1/2 pl-6 fade-in-delay-1">
+                    <h2 class="text-xl font-semibold text-blue-800 mb-4">국내 골판지 시장 경쟁 현황 (2023년)</h2>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <canvas id="competitorsChart" height="208" width="446" style="display: block; box-sizing: border-box; height: 249.6px; width: 535.2px;"></canvas>
+                    </div>
+                    <div class="flex justify-center mt-4">
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
+                                <span>태림포장 (10.8%)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-300 rounded-full mr-2"></div>
+                                <span>대영포장 (7.33%)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
+                                <span>삼보판지 (7.2%)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                                <span>기타 업체 (74.67%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Market analysis -->
+            <div class="grid grid-cols-2 gap-6 mb-6">
+                <div class="bg-blue-50 p-5 rounded-lg shadow-sm fade-in-delay-2">
+                    <h2 class="text-xl font-semibold text-blue-800 mb-3">시장 경쟁력 분석</h2>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><span class="font-semibold">점유율 하락:</span> 2018년 9.12%에서 2023년 7.33%로 감소 추세</li>
+                        <li><span class="font-semibold">경쟁 심화:</span> 태림포장과의 점유율 격차 확대 (2018년 대비 2배 이상)</li>
+                        <li><span class="font-semibold">삼보판지 추격:</span> 2018년 대비 격차 감소, 경쟁 압박 증가</li>
+                        <li><span class="font-semibold">신규 설비투자 부족:</span> 최근 스마트 생태공장 외 신규 투자 계획 부재</li>
+                        <li><span class="font-semibold">연구개발 미흡:</span> 신사업 및 연구개발 활동 부족으로 미래 경쟁력 약화 우려</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-blue-50 p-5 rounded-lg shadow-sm fade-in-delay-2">
+                    <h2 class="text-xl font-semibold text-blue-800 mb-3">국내 시장 동향</h2>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><span class="font-semibold">이커머스 성장:</span> 온라인 쇼핑 확대로 포장재 수요 증가 지속</li>
+                        <li><span class="font-semibold">친환경 요구 확대:</span> 재활용 가능 포장재 및 친환경 솔루션 수요 증가</li>
+                        <li><span class="font-semibold">가격 경쟁 심화:</span> 판매단가 하락 추세로 원가 경쟁력이 중요 요소로 부각</li>
+                        <li><span class="font-semibold">물류 자동화:</span> 스마트 포장 및 자동화 물류 시스템 연계 중요성 증가</li>
+                        <li><span class="font-semibold">산업 통합:</span> 업계 내 인수합병 및 수직계열화 추세 지속</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- SWOT analysis -->
+            <div class="w-full fade-in-delay-3">
+                <h2 class="text-xl font-semibold text-blue-800 mb-4">SWOT 분석</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-blue-100 p-4 rounded-lg">
+                        <h3 class="text-lg font-medium text-blue-700 mb-2">강점 (Strengths)</h3>
+                        <ul class="list-disc list-inside text-gray-700 text-sm">
+                            <li>안정적인 재무구조 (부채비율 26.7%)</li>
+                            <li>대양그룹 계열사로서의 안정적인 공급망</li>
+                            <li>3중골판지(팔레트) 시장에서의 경쟁력</li>
+                            <li>전국적인 생산 네트워크 (안산, 발안, 대구)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-100 p-4 rounded-lg">
+                        <h3 class="text-lg font-medium text-red-700 mb-2">약점 (Weaknesses)</h3>
+                        <ul class="list-disc list-inside text-gray-700 text-sm">
+                            <li>매출 및 영업이익 감소 추세</li>
+                            <li>점유율 하락 지속</li>
+                            <li>연구개발 투자 부족</li>
+                            <li>신사업 발굴 미흡</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-100 p-4 rounded-lg">
+                        <h3 class="text-lg font-medium text-green-700 mb-2">기회 (Opportunities)</h3>
+                        <ul class="list-disc list-inside text-gray-700 text-sm">
+                            <li>이커머스 성장에 따른 포장재 수요 증가</li>
+                            <li>친환경 포장재 시장 확대</li>
+                            <li>스마트 생태공장 구축으로 효율성 증대 가능</li>
+                            <li>원재료 가격 하락 추세</li>
+                        </ul>
+                    </div>
+                    <div class="bg-yellow-100 p-4 rounded-lg">
+                        <h3 class="text-lg font-medium text-yellow-700 mb-2">위협 (Threats)</h3>
+                        <ul class="list-disc list-inside text-gray-700 text-sm">
+                            <li>경쟁업체의 점유율 확대</li>
+                            <li>판매단가 하락 압박</li>
+                            <li>제지산업 경기 악화</li>
+                            <li>환경규제 강화에 따른 추가 비용 발생</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="mt-auto py-4 px-12 text-sm text-gray-500 border-t border-gray-200 flex justify-between">
+            <span>대영포장 종합 분석 리포트</span>
+            <span>2025년 4월 8일</span>
+        </div>
+    </div>
+    
+    <script>
+        // Market share trend chart
+        const marketShareCtx = document.getElementById('marketShareChart').getContext('2d');
+        const marketShareChart = new Chart(marketShareCtx, {
+            type: 'line',
+            data: {
+                labels: ['2018년', '2019년', '2020년', '2021년', '2022년', '2023년'],
+                datasets: [{
+                    label: '대영포장 시장 점유율 (%)',
+                    data: [9.12, 8.42, 7.81, 7.56, 7.45, 7.33],
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                    borderColor: 'rgba(59, 130, 246, 1)',
+                    borderWidth: 2,
+                    tension: 0.1,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 7,
+                        max: 10,
+                        title: {
+                            display: true,
+                            text: '시장 점유율 (%)'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+        
+        // Competitors chart (pie)
+        const competitorsCtx = document.getElementById('competitorsChart').getContext('2d');
+        const competitorsChart = new Chart(competitorsCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['태림포장', '대영포장', '삼보판지', '기타 업체'],
+                datasets: [{
+                    data: [10.8, 7.33, 7.2, 74.67],
+                    backgroundColor: [
+                        'rgba(59, 130, 246, 0.8)',
+                        'rgba(96, 165, 250, 0.8)',
+                        'rgba(245, 158, 11, 0.8)',
+                        'rgba(34, 197, 94, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(59, 130, 246, 1)',
+                        'rgba(96, 165, 250, 1)',
+                        'rgba(245, 158, 11, 1)',
+                        'rgba(34, 197, 94, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+
+<script src="./slide-inner.js.다운로드"></script></body></html>

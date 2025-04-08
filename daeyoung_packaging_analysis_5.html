@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)https://page.genspark.site/slides_tool_call/toolu_01RJpnh2aQq5Rs5PXG78C6DN/daeyoung_packaging_analysis_5.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대영포장 종합 분석 리포트 - 상한가 원인 분석</title>
+    <link href="./tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f0f4f8;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .blue-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .info-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .fade-in-delay-1 {
+            animation: fadeIn 0.5s ease-out 0.1s forwards;
+            opacity: 0;
+        }
+        .fade-in-delay-2 {
+            animation: fadeIn 0.5s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+        .fade-in-delay-3 {
+            animation: fadeIn 0.5s ease-out 0.3s forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col">
+        <!-- Header with title bar -->
+        <div class="blue-gradient h-3 w-full"></div>
+        
+        <!-- Slide header -->
+        <div class="bg-white py-6 px-12 border-b border-gray-200">
+            <h1 class="text-3xl font-bold text-blue-900">상한가 원인 분석</h1>
+        </div>
+        
+        <!-- Main content -->
+        <div class="flex flex-col p-12">
+            <div class="flex mb-8">
+                <!-- Left column - Stock Surge Information -->
+                <div class="w-1/2 pr-6 fade-in">
+                    <h2 class="text-2xl font-semibold text-blue-800 mb-4">2025년 4월 8일 상한가 기록</h2>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-sm mb-6">
+                        <div class="flex justify-between mb-4">
+                            <div>
+                                <h3 class="text-lg font-medium text-blue-700">종가</h3>
+                                <p class="text-3xl font-bold text-blue-900">2,480원</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-blue-700">등락률</h3>
+                                <p class="text-3xl font-bold text-red-600">+29.98%</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-blue-700">거래량</h3>
+                                <p class="text-3xl font-bold text-blue-900">39,125,375주</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div>
+                                <h3 class="text-lg font-medium text-blue-700">거래대금</h3>
+                                <p class="text-3xl font-bold text-blue-900">883억원</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-blue-700">시가총액 대비</h3>
+                                <p class="text-3xl font-bold text-blue-900">3.29%</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow border-l-4 border-yellow-500 mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-yellow-500 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-800 mb-2">상한가 주의사항</h3>
+                                <p class="text-gray-700 text-sm">정치 테마주는 정치적 이벤트가 소멸하면 대부분 급락세를 보이는 경향이 있습니다. 실체가 불분명하고 실제 정치인과의 연결고리가 기업의 본연 가치에 미치는 영향이 거의 없는 것으로 평가되므로 투자 시 주의가 필요합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow mb-4">
+                        <h3 class="text-lg font-medium text-blue-700 mb-3">당일 거래 특징</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>코스닥 시장 거래량 <span class="font-semibold">1위</span> 기록</li>
+                            <li>유가증권시장 상한가 종목 중 <span class="font-semibold">최대 거래대금</span> 기록</li>
+                            <li>장중 내내 높은 거래량 유지</li>
+                            <li>개인투자자 중심의 매수세 집중</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Right column - Theme Stock Analysis -->
+                <div class="w-1/2 pl-6">
+                    <h2 class="text-2xl font-semibold text-blue-800 mb-4 fade-in-delay-1">김문수 테마주 급등 분석</h2>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow mb-6 info-card fade-in-delay-1">
+                        <div class="flex items-start">
+                            <i class="fas fa-user-tie text-blue-500 text-3xl mr-4"></i>
+                            <div>
+                                <h3 class="text-xl font-semibold text-blue-700 mb-2">김문수 장관 대선 출마 선언</h3>
+                                <p class="text-gray-700">김문수 고용노동부 장관이 2025년 4월 8일 조기 대선 출마를 위해 장관직 사퇴를 발표했습니다. 국무회의 이후 정부세종청사에서 퇴임식을 가졌으며, 이를 계기로 이른바 '김문수 테마주'로 분류된, 특히 자신의 경북 출신 배경과 관련된 종목들이 급등했습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg shadow mb-6 fade-in-delay-2">
+                        <h3 class="text-lg font-semibold text-blue-700 mb-3">대영포장의 김문수 테마주 연관성</h3>
+                        <p class="text-gray-700 mb-4">대영포장이 김문수 테마주로 분류된 이유는 김 장관이 경기도지사 시절 추진했던 <span class="font-semibold">유니버셜 스튜디오 코리아 리조트</span> 근처에 소재지가 있다는 점에서 입니다. 이러한 간접적인 연관성만으로도 투자자들의 관심을 끌었습니다.</p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mt-4">
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-medium text-blue-600 mb-1">다른 김문수 테마주</h4>
+                                <ul class="list-disc list-inside text-sm text-gray-700">
+                                    <li>세원물산 (29.97%↑, 김문수 고향 경북 영천 위치)</li>
+                                    <li>옵티시스 (29.91%↑, G창업 프로젝트 지원 관련)</li>
+                                    <li>한솔홈데코 (19.25%↑, 고명호 전 대표 경북고 동창)</li>
+                                    <li>평화홀딩스 (11.84%↑, 영천 연고)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-medium text-blue-600 mb-1">정치 테마주 특징</h4>
+                                <ul class="list-disc list-inside text-sm text-gray-700">
+                                    <li>시가총액 100억~4000억원 중소형주 중심</li>
+                                    <li>직접적 연관성보다 간접적 인연 기반</li>
+                                    <li>단기 급등 후 이벤트 소멸 시 급락 경향</li>
+                                    <li>실질적 기업가치와 연관성 낮음</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-5 rounded-lg shadow info-card fade-in-delay-3">
+                        <h3 class="text-lg font-semibold text-blue-700 mb-3">시장 배경</h3>
+                        <p class="text-gray-700 mb-2">윤석열 전 대통령 탄핵으로 조기 대선이 확정된 상황에서, 정치권 재편과 함께 정치 테마주 매매가 급증했습니다. 정부가 제21대 대통령 선거일을 6월 3일로 확정한 가운데, 관세 전쟁으로 인한 증시 부진 속에서도 정치 테마주들은 강세를 보였습니다.</p>
+                        <p class="text-gray-700">특히 코스피와 코스닥 모두 5% 이상 급락했던 전일(4월 7일)과 대조적으로, 정치 테마주들이 이날 대부분의 상한가 종목을 차지했습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="mt-auto py-4 px-12 text-sm text-gray-500 border-t border-gray-200 flex justify-between">
+            <span>대영포장 종합 분석 리포트</span>
+            <span>2025년 4월 8일</span>
+        </div>
+    </div>
+
+<script src="./slide-inner.js.다운로드"></script></body></html>

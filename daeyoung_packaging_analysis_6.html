@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)https://page.genspark.site/slides_tool_call/toolu_01RJpnh2aQq5Rs5PXG78C6DN/daeyoung_packaging_analysis_6.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대영포장 종합 분석 리포트 - 주가 및 거래량 분석</title>
+    <link href="./tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./all.min.css">
+    <script src="./chart.min.js.다운로드"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f0f4f8;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .blue-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .fade-in-delay-1 {
+            animation: fadeIn 0.5s ease-out 0.1s forwards;
+            opacity: 0;
+        }
+        .fade-in-delay-2 {
+            animation: fadeIn 0.5s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+        .fade-in-delay-3 {
+            animation: fadeIn 0.5s ease-out 0.3s forwards;
+            opacity: 0;
+        }
+        .highlight-box {
+            transition: all 0.3s ease;
+        }
+        .highlight-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col">
+        <!-- Header with title bar -->
+        <div class="blue-gradient h-3 w-full"></div>
+        
+        <!-- Slide header -->
+        <div class="bg-white py-6 px-12 border-b border-gray-200">
+            <h1 class="text-3xl font-bold text-blue-900">주가 및 거래량 분석</h1>
+        </div>
+        
+        <!-- Main content -->
+        <div class="flex flex-col p-12">
+            <!-- Stock Price Chart and Volume Analysis -->
+            <div class="flex mb-8">
+                <!-- Left column - Stock Price Chart -->
+                <div class="w-2/3 pr-6 fade-in">
+                    <h2 class="text-xl font-semibold text-blue-800 mb-4">주가 및 거래량 추이</h2>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <canvas id="stockChart" height="250" style="display: block; box-sizing: border-box; height: 300px; width: 733.2px;" width="611"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2 text-center italic">최근 5일간 대영포장 주가 및 거래량 추이</p>
+                </div>
+                
+                <!-- Right column - Trading Analysis -->
+                <div class="w-1/3 pl-6 fade-in-delay-1">
+                    <h2 class="text-xl font-semibold text-blue-800 mb-4">상한가 전후 분석</h2>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg shadow-sm mb-4 highlight-box">
+                        <h3 class="text-lg font-medium text-blue-700 mb-2">4거래일 연속 상승</h3>
+                        <p class="text-gray-700 text-sm">대영포장은 4월 8일 이전 4거래일 연속 상승세를 보이다가 이날 상한가를 기록하며 52주 최고가인 2,480원에 도달했습니다.</p>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg shadow-sm mb-4 highlight-box">
+                        <h3 class="text-lg font-medium text-blue-700 mb-2">거래량 폭증</h3>
+                        <p class="text-gray-700 text-sm">4월 8일 장중 3,912만 주가 거래되어 평소 대비 약 10배의 거래량을 기록했으며, 코스닥 시장 전체 거래량 1위를 차지했습니다.</p>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg shadow-sm highlight-box">
+                        <h3 class="text-lg font-medium text-blue-700 mb-2">주요 매매 동향</h3>
+                        <ul class="list-disc list-inside text-gray-700 text-sm">
+                            <li>개인투자자 중심의 순매수 집중</li>
+                            <li>기관투자자 소규모 순매도</li>
+                            <li>외국인투자자 관망세 유지</li>
+                            <li>유사 테마주들과 연동된 가격 움직임</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional analysis and insights -->
+            <div class="grid grid-cols-3 gap-6 mb-6 fade-in-delay-2">
+                <div class="bg-white p-5 rounded-lg shadow border-l-4 border-blue-500 highlight-box">
+                    <div class="flex items-start">
+                        <i class="fas fa-chart-line text-blue-500 text-2xl mr-3"></i>
+                        <div>
+                            <h3 class="text-lg font-medium text-blue-700 mb-2">기술적 분석</h3>
+                            <p class="text-gray-700 text-sm">상한가 직전 거래일에 주가가 이동평균선을 상향 돌파하며 매수 신호를 형성했습니다. 급등 이후 RSI 지표가 과매수 구간(80 이상)에 진입했으며, MACD 역시 강한 상승 모멘텀을 보여주고 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow border-l-4 border-blue-500 highlight-box">
+                    <div class="flex items-start">
+                        <i class="fas fa-newspaper text-blue-500 text-2xl mr-3"></i>
+                        <div>
+                            <h3 class="text-lg font-medium text-blue-700 mb-2">뉴스 영향 분석</h3>
+                            <p class="text-gray-700 text-sm">김문수 장관의 대선 출마 뉴스가 오전 9시 전후로 확산되었으며, 이에 따라 장 초반부터 급격한 매수세가 유입되었습니다. 소셜미디어와 주식 커뮤니티에서도 관련 정보가 빠르게 확산되며 개인투자자들의 참여를 촉진했습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow border-l-4 border-blue-500 highlight-box">
+                    <div class="flex items-start">
+                        <i class="fas fa-balance-scale text-blue-500 text-2xl mr-3"></i>
+                        <div>
+                            <h3 class="text-lg font-medium text-blue-700 mb-2">시장 심리 분석</h3>
+                            <p class="text-gray-700 text-sm">주식시장이 전반적으로 하락세를 보이는 가운데, 정치 테마주로의 자금 이동이 뚜렷했습니다. 대영포장은 테마주 중에서도 거래량과 거래대금이 가장 많았으며, '김문수 테마주' 바스켓의 핵심 종목으로 부상했습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key metrics and investment indicators -->
+            <div class="grid grid-cols-4 gap-4 fade-in-delay-3">
+                <div class="bg-blue-100 p-4 rounded-lg text-center">
+                    <h3 class="text-sm font-medium text-blue-800 mb-1">등락률</h3>
+                    <p class="text-2xl font-bold text-red-600">+29.98%</p>
+                    <p class="text-xs text-gray-600">(2025년 4월 8일)</p>
+                </div>
+                <div class="bg-blue-100 p-4 rounded-lg text-center">
+                    <h3 class="text-sm font-medium text-blue-800 mb-1">거래대금</h3>
+                    <p class="text-2xl font-bold text-blue-900">883억원</p>
+                    <p class="text-xs text-gray-600">(시가총액의 3.29%)</p>
+                </div>
+                <div class="bg-blue-100 p-4 rounded-lg text-center">
+                    <h3 class="text-sm font-medium text-blue-800 mb-1">52주 최고가</h3>
+                    <p class="text-2xl font-bold text-blue-900">2,480원</p>
+                    <p class="text-xs text-gray-600">(2025년 4월 8일)</p>
+                </div>
+                <div class="bg-blue-100 p-4 rounded-lg text-center">
+                    <h3 class="text-sm font-medium text-blue-800 mb-1">유동성</h3>
+                    <p class="text-2xl font-bold text-blue-900">상위 1%</p>
+                    <p class="text-xs text-gray-600">(코스닥 기준)</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="mt-auto py-4 px-12 text-sm text-gray-500 border-t border-gray-200 flex justify-between">
+            <span>대영포장 종합 분석 리포트</span>
+            <span>2025년 4월 8일</span>
+        </div>
+    </div>
+    
+    <script>
+        // Stock price and volume chart
+        const stockCtx = document.getElementById('stockChart').getContext('2d');
+        const stockChart = new Chart(stockCtx, {
+            type: 'bar',
+            data: {
+                labels: ['4월 2일', '4월 3일', '4월 4일', '4월 5일', '4월 8일'],
+                datasets: [
+                    {
+                        type: 'line',
+                        label: '주가 (원)',
+                        data: [1850, 1920, 2020, 1908, 2480],
+                        backgroundColor: 'rgba(59, 130, 246, 0.5)',
+                        borderColor: 'rgba(59, 130, 246, 1)',
+                        borderWidth: 2,
+                        tension: 0.2,
+                        pointRadius: 4,
+                        pointBackgroundColor: 'rgba(59, 130, 246, 1)',
+                        yAxisID: 'y',
+                        fill: false,
+                        order: 0
+                    },
+                    {
+                        type: 'bar',
+                        label: '거래량 (천주)',
+                        data: [4250, 3840, 4144, 3520, 39125],
+                        backgroundColor: 'rgba(147, 197, 253, 0.6)',
+                        borderColor: 'rgba(147, 197, 253, 1)',
+                        borderWidth: 1,
+                        yAxisID: 'y1',
+                        order: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false
+                },
+                scales: {
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: '주가 (원)'
+                        },
+                        min: 1500,
+                        max: 2600
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: '거래량 (천주)'
+                        },
+                        grid: {
+                            drawOnChartArea: false
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                }
+            }
+        });
+    </script>
+
+<script src="./slide-inner.js.다운로드"></script></body></html>

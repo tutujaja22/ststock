@@ -1,0 +1,22 @@
+function sendHeight() {
+  try {
+    const height =
+      document.documentElement.scrollHeight || document.body.scrollHeight
+    window.parent.postMessage(
+      {
+        type: 'resize',
+        height: height,
+        url: window.location.href,
+      },
+      '*'
+    )
+  } catch (error) {
+    console.error('向父页面发送高度时出错:', error)
+  }
+}
+
+window.addEventListener('load', sendHeight)
+
+window.addEventListener('resize', sendHeight)
+
+sendHeight()

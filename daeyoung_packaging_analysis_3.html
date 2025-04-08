@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)https://page.genspark.site/slides_tool_call/toolu_01RJpnh2aQq5Rs5PXG78C6DN/daeyoung_packaging_analysis_3.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대영포장 종합 분석 리포트 - 재무 실적</title>
+    <link href="./tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./all.min.css">
+    <script src="./chart.min.js.다운로드"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f0f4f8;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .blue-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .fade-in-delay-1 {
+            animation: fadeIn 0.5s ease-out 0.1s forwards;
+            opacity: 0;
+        }
+        .fade-in-delay-2 {
+            animation: fadeIn 0.5s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+        .fade-in-delay-3 {
+            animation: fadeIn 0.5s ease-out 0.3s forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col">
+        <!-- Header with title bar -->
+        <div class="blue-gradient h-3 w-full"></div>
+        
+        <!-- Slide header -->
+        <div class="bg-white py-6 px-12 border-b border-gray-200">
+            <h1 class="text-3xl font-bold text-blue-900">재무 실적 분석</h1>
+        </div>
+        
+        <!-- Main content -->
+        <div class="flex flex-col p-12">
+            <!-- Financial trends -->
+            <div class="flex mb-8">
+                <!-- Left column - Revenue and Profit Chart -->
+                <div class="w-1/2 pr-6 fade-in">
+                    <h2 class="text-xl font-semibold text-blue-800 mb-4">매출액 및 이익 추이 (단위: 억원)</h2>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <canvas id="financialChart" height="208" style="display: block; box-sizing: border-box; height: 249.6px; width: 535.2px;" width="446"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Right column - Key Financial Indicators -->
+                <div class="w-1/2 pl-6 fade-in-delay-1">
+                    <h2 class="text-xl font-semibold text-blue-800 mb-4">주요 재무 지표</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
+                            <h3 class="text-lg font-medium text-blue-700 mb-1">유동비율</h3>
+                            <p class="text-3xl font-bold text-blue-900">216%</p>
+                            <p class="text-sm text-gray-600">2023년 (전년대비 <span class="text-green-600">+72%p</span>)</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
+                            <h3 class="text-lg font-medium text-blue-700 mb-1">부채비율</h3>
+                            <p class="text-3xl font-bold text-blue-900">26.7%</p>
+                            <p class="text-sm text-gray-600">2023년 (전년대비 <span class="text-green-600">-21.4%p</span>)</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
+                            <h3 class="text-lg font-medium text-blue-700 mb-1">영업이익률</h3>
+                            <p class="text-3xl font-bold text-blue-900">3.9%</p>
+                            <p class="text-sm text-gray-600">2023년 (전년대비 <span class="text-green-600">+0.3%p</span>)</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
+                            <h3 class="text-lg font-medium text-blue-700 mb-1">당기순이익률</h3>
+                            <p class="text-3xl font-bold text-blue-900">2.8%</p>
+                            <p class="text-sm text-gray-600">2023년 (전년대비 <span class="text-red-600">-0.1%p</span>)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional financial data -->
+            <div class="flex mb-6 fade-in-delay-2">
+                <div class="w-full">
+                    <h2 class="text-xl font-semibold text-blue-800 mb-4">최근 판매단가 추이</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead>
+                                <tr>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">제품유형</th>
+                                    <th class="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">2022년</th>
+                                    <th class="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">2023년</th>
+                                    <th class="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">2024년 3분기</th>
+                                    <th class="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">변동률</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">골판지 원단 (원/㎡)</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-900">569.9</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-900">540.3</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-900">512.7</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-red-600">-10.0%</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">골판지 상자 (원/㎡)</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-900">639.1</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-900">590.2</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-900">544.8</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-red-600">-14.8%</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">골심지 매입단가 (원/kg)</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-900">521.0</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-900">460.8</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-900">446.8</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-green-600">-14.2%</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">표면지 매입단가 (원/kg)</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-900">652.6</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-900">605.2</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-900">581.5</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-right text-green-600">-10.9%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Business challenges summary -->
+            <div class="w-full bg-blue-50 p-5 rounded-lg shadow-sm fade-in-delay-3">
+                <h2 class="text-xl font-semibold text-blue-800 mb-2">재무 분석 요약</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li><span class="font-semibold">매출 감소세</span>: 2022년부터 2024년까지 2년 연속 매출 감소 (-6.3%, -0.9%)</li>
+                    <li><span class="font-semibold">영업이익 급감</span>: 2024년 영업이익 9억원으로 전년 대비 91.9% 감소</li>
+                    <li><span class="font-semibold">재무 안정성 개선</span>: 유동부채 감소로 유동비율 개선 및 부채비율 하락</li>
+                    <li><span class="font-semibold">단가 압박</span>: 원재료 매입가는 하락했으나 판매가격이 더 큰 폭으로 하락하여 마진 축소</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="mt-auto py-4 px-12 text-sm text-gray-500 border-t border-gray-200 flex justify-between">
+            <span>대영포장 종합 분석 리포트</span>
+            <span>2025년 4월 8일</span>
+        </div>
+    </div>
+    
+    <script>
+        // Financial data chart
+        const ctx = document.getElementById('financialChart').getContext('2d');
+        const financialChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['2022년', '2023년', '2024년'],
+                datasets: [
+                    {
+                        label: '매출액',
+                        data: [3026, 2835, 2808],
+                        backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                        borderColor: 'rgba(59, 130, 246, 1)',
+                        borderWidth: 1,
+                        order: 1
+                    },
+                    {
+                        label: '영업이익',
+                        data: [119, 111, 9],
+                        backgroundColor: 'rgba(16, 185, 129, 0.7)',
+                        borderColor: 'rgba(16, 185, 129, 1)',
+                        borderWidth: 1,
+                        order: 2
+                    },
+                    {
+                        label: '영업이익률 (%)',
+                        data: [3.6, 3.9, 0.3],
+                        type: 'line',
+                        borderColor: 'rgba(249, 115, 22, 1)',
+                        backgroundColor: 'rgba(249, 115, 22, 0.1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(249, 115, 22, 1)',
+                        pointRadius: 4,
+                        tension: 0.1,
+                        yAxisID: 'y1',
+                        order: 0
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '억원'
+                        }
+                    },
+                    y1: {
+                        position: 'right',
+                        beginAtZero: true,
+                        max: 10,
+                        title: {
+                            display: true,
+                            text: '%'
+                        },
+                        grid: {
+                            drawOnChartArea: false
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+    </script>
+
+<script src="./slide-inner.js.다운로드"></script></body></html>
